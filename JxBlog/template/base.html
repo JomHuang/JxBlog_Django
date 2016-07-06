@@ -1,0 +1,18 @@
+{% load staticfiles i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>{% block title %}
+       欢迎使用Django,我的博客
+   {% endblock title %}</title>
+  {% block head %}
+        <!--静态资源-->
+    {% endblock head %}
+</head>
+<body>
+{% block main %}
+    <p>我的第一模板--欢迎来到Django</p>
+{% endblock main %}
+</body>
+</html>

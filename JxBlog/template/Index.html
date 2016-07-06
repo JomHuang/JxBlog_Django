@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load staticfiles i18n %}
+
+
+{% block title %}
+    欢迎和使用Django-Index
+{% endblock%}
+
+{% block main %}
+    It is now {{ nowdate }}.<br />
+<p>我的名字叫{{name}}.</p>
+<p>我爱{{favourite}}.</p>
+{% endblock%}
