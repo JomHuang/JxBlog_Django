@@ -59,7 +59,7 @@ ROOT_URLCONF = 'JxBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'JxBlog/template')]
+        'DIRS': [os.path.join(BASE_DIR, 'JxBlog/TEMPLATES')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -81,15 +81,16 @@ WSGI_APPLICATION = 'JxBlog.wsgi.application'
 
 """
 调整数据库文件位置
+        'ENGINE':'django.db.backends.mysql',
+        'USER':'root',
+        'PASSWORD':'',
+        'NAME':'test',
+        'HOST':'localhost',
 """
-DATAFILES_PATH="./DataFiles/db.sqlite3";
+DATAFILES_PATH="./DataFiles/db.sqlite3"
 DATABASES = {
     'default': {
-        #'ENGINE':'django.db.backends.mysql',
-        #'USER':'root',
-        #'PASSWORD':'',
-        #'NAME':'test',
-        #'HOST':'localhost',
+
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, DATAFILES_PATH),
     }

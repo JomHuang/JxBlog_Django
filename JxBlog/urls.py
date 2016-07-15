@@ -17,7 +17,7 @@ from django.conf.urls import url;
 from django.contrib import admin;
 
 from JxBlog.handle import index_test;
-from JxBlog.login.views import login
+from JxBlog.login.views import login,register
 from JxBlog.views import hello,servertime,hours_ahead,index;
 
 urlpatterns = [
@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^time/$', servertime),
     url(r'^time/plus/(\d{1,2})/$',hours_ahead),
     url(r'^login/$', login),
+    url(r'^register/$',register),
 ]
